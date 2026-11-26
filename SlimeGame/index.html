@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Juego del slime</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Slime Run</h1>
+
+<!-- MENÚ PRINCIPAL -->
+<div id="menu" class="modal-overlay active">
+  <div class="modal-box">
+    <h2>SLIME RUN</h2>
+    <button class="menu-btn" id="btn-play">JUGAR</button>
+    <button class="menu-btn" id="btn-opts">OPCIONES</button>
+    <button class="menu-btn" id="btn-credits">CRÉDITOS</button>
+  </div>
+</div>
+
+<!-- PANTALLA DE OPCIONES -->
+<div id="opts" class="modal-overlay">
+  <div class="modal-box">
+    <h2>OPCIONES</h2>
+    <label class="option-row">
+      <span>Música</span>
+      <input type="checkbox" checked>
+    </label>
+    <label class="option-row">
+      <span>Efectos (SFX)</span>
+      <input type="checkbox" checked>
+    </label>
+    <button class="menu-btn" id="btn-back-opts">VOLVER</button>
+  </div>
+</div>
+
+<!-- PANTALLA DE CRÉDITOS -->
+<div id="credits" class="modal-overlay">
+  <div class="modal-box">
+    <h2>CRÉDITOS</h2>
+    <p>Creado por <strong>Juan andrade y camilo padilla</strong></p>
+    <p>Inspirado en el clásico juego de Chrome.</p>
+    <p>Hecho con HTML5 Canvas.</p>
+    <button class="menu-btn" id="btn-back-credits">VOLVER</button>
+  </div>
+</div>
+
+<!-- NUEVA PANTALLA DE LOGROS -->
+<div id="achievements-screen" class="modal-overlay">
+  <div class="modal-box" style="max-height: 80vh; overflow-y: auto; width: 500px;">
+    <h2>LOGROS</h2>
+    <div id="achievements-list"></div>
+    <button class="menu-btn" id="btn-back-achievements" style="margin-top: 15px;">VOLVER</button>
+  </div>
+</div>
+
+<canvas id="c" width="600" height="200"></canvas>
+<p>Espacio o ↑ para saltar · ↓ para agacharte · Escape para pausar · toca la pantalla en el móvil</p>
+<button id="duck">Agacharse</button>
+<script src="juego.js"></script>
+</body>
+</html>
